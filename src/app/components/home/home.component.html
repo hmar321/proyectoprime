@@ -2,12 +2,12 @@
     <h1 class="text-primary">Bienvenido a PrimeNG</h1>
     <p-image src="assets/images/primelogo.png" previewImageSrc="assets/images/primeng.png" alt="Image" width="500"
         [preview]="true"></p-image>
-    <div class="d-flex d-flex justify-content-between mt-4" style="width: 400px;">
+    <div class="d-flex d-flex justify-content-between mt-4" style="width: 30rem;">
         <p-button (onClick)="abrirPrimeng()" [raised]="true" >
             <span class="px-3">Get started</span>
             <i class="pi pi-arrow-right"></i>
         </p-button>
-        <p-button (onClick)="copiarNpm()" [outlined]="true" severity="secondary" [style]="{'width':'200px'}">
+        <p-button (onClick)="copiarNpm()" [outlined]="true" severity="secondary">
             <i class="{{textCopyIcon}}"></i>
             <span class="px-3">{{textCopyBtn}}</span>
         </p-button>

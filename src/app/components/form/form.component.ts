@@ -12,13 +12,15 @@ export class FormComponent implements OnInit {
   public sugFiltro: Array<SelectItem>;
   public deportes: Array<SelectItem>;
 
-  public date!:Date;
+  public date!: Date;
 
   public checkbox: boolean = false;
 
-  public colorRGB!:string;
+  public colorRGB!: any;
 
-  public opcion!:SelectItem;
+  public opcion!: SelectItem;
+
+  public multiselect: SelectItem[];
 
   constructor(private _cdref: ChangeDetectorRef) {
     this.deportes = [
@@ -35,7 +37,11 @@ export class FormComponent implements OnInit {
       { label: 'Waterpolo', value: 'Waterpolo' },
     ];
 
-    this.sugFiltro = this.deportes;
+    this.sugFiltro = [];
+
+    this.colorRGB = { r: 100, g: 150, b: 250 };
+
+    this.multiselect = [];
   }
   ngOnInit(): void {
     this._cdref.detectChanges();

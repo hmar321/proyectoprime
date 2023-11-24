@@ -21,6 +21,9 @@ import { CalendarModule } from 'primeng/calendar';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { DropdownModule } from 'primeng/dropdown';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 @NgModule({
@@ -48,6 +51,9 @@ import { DropdownModule } from 'primeng/dropdown';
     CheckboxModule,
     ColorPickerModule,
     DropdownModule,
+    MultiSelectModule,
+    ConfirmDialogModule,
+    ToastModule,
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
