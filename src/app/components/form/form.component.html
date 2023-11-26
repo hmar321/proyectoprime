@@ -1,30 +1,33 @@
-<h3>Ejemplos formulario:</h3>
-<form #ejemploForm="ngForm" class="card d-flex flex-column justify-content-center">
-    <div class="mx-4 mb-4 mt-4">
-        <p-dropdown #cajaselect name="cajaselect" [options]="deportes" [(ngModel)]="opcion" optionLabel="label"
-            [showClear]="true" placeholder="Selecciona un deporte"></p-dropdown>
-    </div>
-    <div class="mx-4 mb-4">
-        <span class="p-float-label">
-            <p-autoComplete #cajaauto name="cajaauto" [(ngModel)]="seleccionado" [suggestions]="sugFiltro"
-            (completeMethod)="search($event)" inputId="float-label"></p-autoComplete>
-            <label for="float-label">Deportes sugerencias</label>
-        </span>
-    </div>
-    <div class="mx-4 mb-4">
-        <p-calendar #cajafecha name="cajafecha" [(ngModel)]="date" placeholder="Fecha"></p-calendar>
-    </div>
-    <div class="mx-4 mb-4">
-        <p-checkbox #cajacheckbox name="cajacheckbox" [(ngModel)]="checkbox" [binary]="true" inputId="binary"
-            label="Checkbox"></p-checkbox>
-    </div>
-    <div class="mx-4 mb-4">
-        <label class="form-label">Selecciona un color: {{"(r: " + colorRGB.r + ", g: " + colorRGB.g + ", b: " +
-            colorRGB.b + ")"}}</label><br>
-        <p-colorPicker #cajacolor name="cajacolor" [(ngModel)]="colorRGB" format="rgb"></p-colorPicker>
-    </div>
-    <div class="mx-4 mb-4">
-        <p-multiSelect #cajamultiselect name="cajamultiselect" [options]="deportes" [(ngModel)]="multiselect" optionLabel="label" placeholder="Deportes multiselect" display="chip" [showClear]="true"></p-multiSelect>
-    </div>
+<p-fieldset legend="Ejemplos formulario:">
+    <form #ejemploForm="ngForm">
+        <div class="mb-4">
+            <p-dropdown #cajaselect name="cajaselect" [options]="deportes" [(ngModel)]="opcion" optionLabel="label"
+                [showClear]="true" placeholder="Selecciona un deporte"></p-dropdown>
+        </div>
+        <div class="mb-4">
+            <span class="p-float-label">
+                <p-autoComplete #cajaauto name="cajaauto" [(ngModel)]="seleccionado" [suggestions]="sugFiltro"
+                    (completeMethod)="search($event)" inputId="float-label"></p-autoComplete>
+                <label for="float-label">Deportes sugerencias</label>
+            </span>
+        </div>
+        <div class="mb-4">
+            <p-calendar #cajafecha name="cajafecha" [(ngModel)]="date" placeholder="Fecha"></p-calendar>
+        </div>
+        <div class="mb-4">
+            <p-checkbox #cajacheckbox name="cajacheckbox" [(ngModel)]="checkbox" [binary]="true" inputId="binary"
+                label="Checkbox"></p-checkbox>
+        </div>
+        <div class="mb-4">
+            <label>Selecciona un color: {{"(r: " + colorRGB.r + ", g: " + colorRGB.g + ", b: " +
+                colorRGB.b + ")"}}</label><br>
+            <p-colorPicker #cajacolor name="cajacolor" [(ngModel)]="colorRGB" format="rgb"></p-colorPicker>
+        </div>
+        <div class="">
+            <p-multiSelect #cajamultiselect name="cajamultiselect" [options]="deportes" [(ngModel)]="multiselect"
+                optionLabel="label" placeholder="Deportes multiselect" display="chip"
+                [showClear]="true"></p-multiSelect>
+        </div>
 
-</form>
+    </form>
+</p-fieldset>

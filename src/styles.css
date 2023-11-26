@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* @import "bootstrap/dist/css/bootstrap.min.css"; */
+@import "primeflex/primeflex.css";
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
+
+/* RETOQUES POR INCOMPATIBILIDAD CON BOOTSTRAP
 .p-tabmenu-nav a {
   text-decoration: none;
 }
@@ -29,3 +32,8 @@
   padding: 0;
   list-style-type: none;
 }
+
+.p-dialog .p-dialog-footer button {
+  margin: 0 0.5rem 0 0;
+  width: auto;
+} */
